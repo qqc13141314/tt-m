@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <h1>HEIMA</h1>
-
-    </div>
     <router-view />
   </div>
 </template>
@@ -14,6 +10,4 @@ export default {
 
 }
 </script>
-
-<style lang="less">
-</style>
+<style lang="less"></style>
