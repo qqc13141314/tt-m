@@ -9,7 +9,7 @@
         </el-form-item>
         <el-input v-model="user.mobile" prefix-icon="el-icon-mobile-phone" placeholder='请输入手机号'></el-input>
         <el-form-item>
-          <el-input v-model="user.code" prefix-icon="el-icon-unlock" placeholder="请输入密码"></el-input>
+          <el-input class='code-input' v-model="user.code" prefix-icon="el-icon-unlock" placeholder="请输入验证码"></el-input>
         </el-form-item>
         <el-form-item>
 
@@ -83,6 +83,9 @@ export default {
     padding: 20px;
     box-sizing: border-box;
     background: url("login.jpeg");
+    .code-input {
+      margin: 10px 0px 0px 0px;
+    }
     .login-btn {
       width: 100%;
       margin-top: 15px;
