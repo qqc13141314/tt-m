@@ -3,7 +3,7 @@
     <div class="login-form">
       <el-form ref="login-form" :model="user" :rules="rules">
         <el-form-item>
-          <span>黑马头条文章管理系统</span>
+          <span>黑马头条文章发布管理系统</span>
         </el-form-item>
         <el-form-item prop="mobile">
           <el-input v-model="user.mobile" prefix-icon="el-icon-mobile-phone" placeholder='请输入手机号'></el-input>
@@ -67,12 +67,9 @@ export default {
       this.loginLoading = true
       login(this.user).then(res => {
         console.log(res)
+        window.localStorage.setItem('user', JSON.stringify(res.data.data))
         this.loginLoading = false
-        this.$message({
-          showClose: true,
-          message: '恭喜你，登陆成功',
-          type: 'success'
-        })
+        this.$router.push('/')
       }).catch(err => {
         console.log('登陆失败', err)
         this.loginLoading = false
